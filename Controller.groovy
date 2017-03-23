@@ -10,9 +10,14 @@ import org.springframework.web.bind.annotation.ResponseBody
 @SpringBootApplication
 class MyController {
 
-  @RequestMapping(value = "/")
+    @RequestMapping(value = "/")
     def @ResponseBody hello() {
         return "Hello World!"
+    }
+
+    @RequestMapping(value = "/g")
+    def @ResponseBody gee() {
+        return "gee"
     }
 
     static def main(args) {
