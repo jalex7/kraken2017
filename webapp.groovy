@@ -28,6 +28,6 @@ class MyController {
         return ResponseEntity.ok(greeting)
     }
  
-    static def main(args) {  org.springframework.boot.SpringApplication.run(MyController, args)  }
+    static def main(args) {  org.springframework.boot.SpringApplication.run(MyController.class, args)  }
 
 }
