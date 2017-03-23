@@ -1,16 +1,12 @@
 package hello
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.http.HttpStatus
-import org.springframework.http.ResponseEntity
-import org.springframework.stereotype.Controller
+import org.springframework.http.*
 import org.springframework.web.bind.annotation.*
  
 class Greeting {  Integer id;  String message  }
 
-@Controller
-@SpringBootApplication
+@org.springframework.stereotype.Controller
+@org.springframework.boot.autoconfigure.SpringBootApplication
 class MyController {
 
     @RequestMapping(value = "/")
@@ -37,6 +33,6 @@ class MyController {
         return ResponseEntity.ok(greeting)
     }
  
-    static def main(args) {  SpringApplication.run(MyController.class, args)  }
+    static def main(args) {  org.springframework.boot.SpringApplication.run(MyController, args)  }
 
 }
