@@ -13,6 +13,7 @@ class MyController {
     @RequestMapping(value = "/")
     def @ResponseBody hello() {
         println System.getenv()
+        new File(".").eachFile() {  println it.getName()  }
         return "Hello World!"
     }
 
