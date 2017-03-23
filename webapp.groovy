@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.*
  
 class Greeting {  Integer id;  String message  }
 
-@groovy.transform.CompileStatic
+// @groovy.transform.CompileStatic
 @org.springframework.stereotype.Controller
 @org.springframework.boot.autoconfigure.SpringBootApplication
 class MyController {
@@ -28,6 +28,6 @@ class MyController {
         return ResponseEntity.ok(greeting)
     }
  
-    static def main(args) {  org.springframework.boot.SpringApplication.run(MyController.class, args)  }
+    static def main(args) {  org.springframework.boot.SpringApplication.run(MyController, args)  }
 
 }
