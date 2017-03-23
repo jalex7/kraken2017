@@ -31,7 +31,7 @@ class MyController {
     ResponseEntity<?> getById(@PathVariable String id) {
         Greeting greeting = greetings.find { it.id == id.toInteger() }
         if (!greeting) {
-            return ResponseEntity.noContent().build()
+            return new ResponseEntity(404)
         }
         return ResponseEntity.ok(greeting)
     }
