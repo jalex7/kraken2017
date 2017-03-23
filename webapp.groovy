@@ -1,10 +1,10 @@
-package hello
-
+package demo
 import org.springframework.http.*
 import org.springframework.web.bind.annotation.*
  
 class Greeting {  Integer id;  String message  }
 
+@groovy.transform.CompileStatic
 @org.springframework.stereotype.Controller
 @org.springframework.boot.autoconfigure.SpringBootApplication
 class MyController {
@@ -14,11 +14,6 @@ class MyController {
         println System.getenv()
         new File(".").eachFile() {  println it.getName()  }
         return "Hello World!"
-    }
-
-    @RequestMapping(value = "/g")
-    def @ResponseBody gee() {
-        return "gee"
     }
 
     List<Greeting> greetings = [new Greeting(id: 1, message: 'Hello'), new Greeting(id: 2, message: 'Hi'),
