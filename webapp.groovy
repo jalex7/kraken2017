@@ -1,7 +1,8 @@
 package hello
- 
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.*
@@ -31,7 +32,7 @@ class MyController {
     ResponseEntity<?> getById(@PathVariable String id) {
         Greeting greeting = greetings.find { it.id == id.toInteger() }
         if (!greeting) {
-            return new ResponseEntity(404)
+            return new ResponseEntity(HttpStatus.404)
         }
         return ResponseEntity.ok(greeting)
     }
