@@ -1,6 +1,5 @@
-repositories {  mavenCentral()  }
-
 buildscript {
+    repositories {  mavenCentral()  }
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:1.3.0.RELEASE"
     }
@@ -11,6 +10,8 @@ apply plugin: 'spring-boot'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 sourceSets.main.groovy.srcDirs = ['.']
+
+repositories {  mavenCentral()  }
 
 dependencies {
     compile "org.springframework.boot:spring-boot-starter-web"
