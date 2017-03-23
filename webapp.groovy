@@ -32,7 +32,7 @@ class MyController {
     ResponseEntity<?> getById(@PathVariable String id) {
         Greeting greeting = greetings.find { it.id == id.toInteger() }
         if (!greeting) {
-            return new ResponseEntity(HttpStatus.404)
+            return new ResponseEntity(HttpStatus.NOT_FOUND)
         }
         return ResponseEntity.ok(greeting)
     }
