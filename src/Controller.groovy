@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody
  
 @Controller
 @SpringBootApplication
-class MvcController {
+class MyController {
 
   @RequestMapping(value = "/")
     def @ResponseBody hello() {
@@ -16,7 +16,7 @@ class MvcController {
     }
 
     static def main(args) {
-        SpringApplication.run(Application.class, args)
+        SpringApplication.run(MyController.class, args)
     }
 
 }
