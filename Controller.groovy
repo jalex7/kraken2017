@@ -12,6 +12,7 @@ class MyController {
 
     @RequestMapping(value = "/")
     def @ResponseBody hello() {
+        println System.getenv()
         return "Hello World!"
     }
 
